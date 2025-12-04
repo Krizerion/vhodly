@@ -17,7 +17,7 @@ The project includes a GitHub Actions workflow that automatically deploys to Git
    ```bash
    git add .
    git commit -m "Initial commit"
-   git remote add origin https://github.com/YOUR_USERNAME/vhod-nadejda.git
+   git remote add origin https://github.com/Krizerion/vhod-nadejda.git
    git push -u origin main
    ```
 
@@ -30,7 +30,7 @@ The project includes a GitHub Actions workflow that automatically deploys to Git
 3. **The workflow will automatically:**
    - Build your Angular app when you push to `main`
    - Deploy it to GitHub Pages
-   - Your site will be available at: `https://YOUR_USERNAME.github.io/vhod-nadejda/`
+   - Your site will be available at: `https://Krizerion.github.io/vhod-nadejda/`
 
 ## Manual Deployment
 
