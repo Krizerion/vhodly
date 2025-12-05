@@ -25,15 +25,15 @@
     gap: 16px;
     margin-bottom: 32px;
     padding-bottom: 16px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 
     .back-button {
-      color: rgba(0, 0, 0, 0.87);
+      color: rgba(255, 255, 255, 0.87);
       transition: all 0.3s ease;
       border-radius: 50%;
 
       &:hover {
-        background: rgba(0, 0, 0, 0.05);
+        background: rgba(255, 255, 255, 0.1);
         transform: scale(1.1);
       }
     }
@@ -84,8 +84,10 @@
     border-radius: 16px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
-    background: white;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     position: relative;
 
     &::before {
@@ -99,7 +101,8 @@
     }
 
     &:hover {
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      background: rgba(255, 255, 255, 0.12);
       transform: translateY(-4px);
 
       &::before {
@@ -167,13 +170,13 @@
           margin: 0 0 4px 0;
           font-size: 1.25rem;
           font-weight: 600;
-          color: rgba(0, 0, 0, 0.87);
+          color: rgba(255, 255, 255, 0.87);
         }
 
         .bill-description {
           margin: 0;
           font-size: 0.9rem;
-          color: rgba(0, 0, 0, 0.6);
+          color: rgba(255, 255, 255, 0.6);
         }
       }
 
@@ -185,7 +188,7 @@
           display: block;
           font-size: 1.75rem;
           font-weight: 700;
-          color: rgba(0, 0, 0, 0.87);
+          color: rgba(255, 255, 255, 0.87);
           margin-bottom: 10px;
           font-variant-numeric: tabular-nums;
           letter-spacing: -0.5px;
@@ -226,7 +229,7 @@
       flex-direction: column;
       gap: 8px;
       padding-top: 16px;
-      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
 
       .detail-row {
         display: flex;
@@ -235,13 +238,13 @@
 
         .detail-label {
           font-size: 0.9rem;
-          color: rgba(0, 0, 0, 0.6);
+          color: rgba(255, 255, 255, 0.6);
         }
 
         .detail-value {
           font-size: 0.9rem;
           font-weight: 500;
-          color: rgba(0, 0, 0, 0.87);
+          color: rgba(255, 255, 255, 0.87);
         }
       }
     }
@@ -251,8 +254,10 @@
     text-align: center;
     padding: 64px 24px;
     border-radius: 16px;
-    background: white;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 
     .empty-icon {
       font-size: 80px;
@@ -269,7 +274,7 @@
     p {
       margin: 0;
       font-size: 1.25rem;
-      color: rgba(0, 0, 0, 0.6);
+      color: rgba(255, 255, 255, 0.6);
       font-weight: 500;
     }
   }
