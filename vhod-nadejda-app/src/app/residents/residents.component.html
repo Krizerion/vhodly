@@ -64,21 +64,24 @@
     </mat-card-header>
     <mat-card-content>
       <div class="apartments-grid">
-        @for (floor of floors; track floor.number) {
+        @for (floor of floors; track $index) {
         <div class="floor-row">
           <div class="floor-label">{{ floor.number }} етаж</div>
           <div class="apartments-row">
-            @for (apt of floor.apartments; track apt.number) {
+            @for (apt of floor.apartments; track $index) {
             <div
               class="apartment-cell"
               [class.empty]="!apt.number"
               [class.clickable]="apt.number"
-              (click)="openApartmentDetails(apt, floor.number)"
+              (click)="openApartmentDetails(apt)"
             >
               @if (apt.number) {
               <div class="apartment-number">ап.{{ apt.number }}</div>
-              <div class="apartment-debt" [class.no-debt]="apt.debt === 0">
-                €{{ apt.debt | number : "1.2-2" }}
+              <div
+                class="apartment-debt"
+                [class.no-debt]="(apt.totalDebt || 0) === 0"
+              >
+                €{{ apt.totalDebt || 0 | number : "1.2-2" }}
               </div>
               }
             </div>

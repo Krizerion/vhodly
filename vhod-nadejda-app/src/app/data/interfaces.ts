@@ -1,10 +1,9 @@
 export interface Apartment {
   number: number | null;
-  debt: number;
   residentsCount?: number;
   repairsFee?: number; // Такса за ремонти (фиксирана €2.50)
   currentExpensesFee?: number; // Такса за текущи разходи (според етажа и брой живущи)
-  totalDebt?: number;
+  totalDebt?: number; // Общ дълг на апартамента
   lastPaymentDate?: string;
 }
 

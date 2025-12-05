@@ -1,37 +1,45 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDialog } from '@angular/material/dialog';
-import { announcements, accountBalances, floors } from '../data/residents.data';
-import { ApartmentDetailsDialogComponent } from './apartment-details-dialog.component';
-import { Apartment } from '../data/interfaces';
+import { DataService } from '../data/data.service';
+import { Apartment, Announcement, Floor } from '../data/interfaces';
 
 @Component({
   selector: 'vn-residents',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatIconModule],
+  imports: [CommonModule, RouterModule, MatCardModule, MatIconModule],
   templateUrl: './residents.component.html',
   styleUrl: './residents.component.scss',
 })
-export class ResidentsComponent {
-  // Data loaded from data files
-  announcements = announcements;
-  currentExpensesBalance = accountBalances.currentExpensesBalance;
-  repairsBalance = accountBalances.repairsBalance;
-  floors = floors;
+export class ResidentsComponent implements OnInit {
+  announcements: Announcement[] = [];
+  currentExpensesBalance = 0;
+  repairsBalance = 0;
+  floors: Floor[] = [];
 
-  constructor(private dialog: MatDialog) {}
+  private readonly router = inject(Router);
+  private readonly dataService = inject(DataService);
+  private readonly cdr = inject(ChangeDetectorRef);
 
-  openApartmentDetails(apartment: Apartment, floorNumber: number) {
+  ngOnInit(): void {
+    this.dataService.loadData().subscribe((data) => {
+      this.announcements = [...data.announcements];
+      this.currentExpensesBalance = data.accountBalances.currentExpensesBalance;
+      this.repairsBalance = data.accountBalances.repairsBalance;
+      this.floors = [...data.floors];
+      // Force change detection
+      this.cdr.detectChanges();
+      console.log(this.floors);
+    });
+  }
+
+  openApartmentDetails(apartment: Apartment): void {
     if (!apartment.number) {
       return;
     }
 
-    this.dialog.open(ApartmentDetailsDialogComponent, {
-      width: '500px',
-      maxWidth: '90vw',
-      data: { apartment, floorNumber },
-    });
+    this.router.navigate(['/apartment', apartment.number]);
   }
 }

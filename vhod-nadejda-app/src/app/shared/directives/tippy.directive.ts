@@ -1,4 +1,12 @@
-import { Directive, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  Input,
+  OnDestroy,
+  OnInit,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 import tippy, { Instance, Props } from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
 
@@ -6,7 +14,7 @@ import 'tippy.js/dist/tippy.css';
   selector: '[vnTippy]',
   standalone: true,
 })
-export class TippyDirective implements OnInit, OnDestroy {
+export class TippyDirective implements OnInit, OnChanges, OnDestroy {
   @Input('vnTippy') content: string | undefined = '';
   @Input() tippyOptions: Partial<Props> = {};
 
@@ -15,6 +23,21 @@ export class TippyDirective implements OnInit, OnDestroy {
   constructor(private el: ElementRef) {}
 
   ngOnInit() {
+    this.initTippy();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['content'] && !changes['content'].firstChange) {
+      // Update content if instance already exists
+      if (this.instance) {
+        this.instance.setContent(this.content || '');
+      } else {
+        this.initTippy();
+      }
+    }
+  }
+
+  private initTippy() {
     if (this.content) {
       const result = tippy(this.el.nativeElement, {
         content: this.content,

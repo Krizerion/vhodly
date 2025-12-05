@@ -20,17 +20,15 @@ export const floors: Floor[] = [
     apartments: [
       {
         number: 116,
-        debt: 0,
         residentsCount: 4,
         repairsFee: 2.5,
         currentExpensesFee: 6.0, // 4 * 1.50
         totalDebt: 0,
         lastPaymentDate: '25-Jan-2025',
       },
-      { number: null, debt: 0 },
+      { number: null },
       {
         number: 117,
-        debt: 0,
         residentsCount: 2,
         repairsFee: 2.5,
         currentExpensesFee: 3.0, // 2 * 1.50
@@ -44,7 +42,6 @@ export const floors: Floor[] = [
     apartments: [
       {
         number: 118,
-        debt: 0,
         residentsCount: 1,
         repairsFee: 2.5,
         currentExpensesFee: 1.5, // 1 * 1.50
@@ -53,7 +50,6 @@ export const floors: Floor[] = [
       },
       {
         number: 119,
-        debt: 0,
         residentsCount: 2,
         repairsFee: 2.5,
         currentExpensesFee: 3.0, // 2 * 1.50
@@ -62,7 +58,6 @@ export const floors: Floor[] = [
       },
       {
         number: 120,
-        debt: 0,
         residentsCount: 1,
         repairsFee: 2.5,
         currentExpensesFee: 1.5, // 1 * 1.50
@@ -76,7 +71,6 @@ export const floors: Floor[] = [
     apartments: [
       {
         number: 121,
-        debt: 0,
         residentsCount: 2,
         repairsFee: 2.5,
         currentExpensesFee: 8.0, // 2 * 4.00
@@ -85,7 +79,6 @@ export const floors: Floor[] = [
       },
       {
         number: 122,
-        debt: 0,
         residentsCount: 1,
         repairsFee: 2.5,
         currentExpensesFee: 4.0, // 1 * 4.00
@@ -94,7 +87,6 @@ export const floors: Floor[] = [
       },
       {
         number: 123,
-        debt: 0,
         residentsCount: 1,
         repairsFee: 2.5,
         currentExpensesFee: 4.0, // 1 * 4.00
@@ -108,7 +100,6 @@ export const floors: Floor[] = [
     apartments: [
       {
         number: 124,
-        debt: 0,
         residentsCount: 4,
         repairsFee: 2.5,
         currentExpensesFee: 16.0, // 4 * 4.00
@@ -117,7 +108,6 @@ export const floors: Floor[] = [
       },
       {
         number: 125,
-        debt: 0,
         residentsCount: 2,
         repairsFee: 2.5,
         currentExpensesFee: 8.0, // 2 * 4.00
@@ -126,7 +116,6 @@ export const floors: Floor[] = [
       },
       {
         number: 126,
-        debt: 0,
         residentsCount: 0,
         repairsFee: 2.5,
         currentExpensesFee: 0.0, // 0 * 4.00
@@ -140,7 +129,6 @@ export const floors: Floor[] = [
     apartments: [
       {
         number: 127,
-        debt: 0,
         residentsCount: 2,
         repairsFee: 2.5,
         currentExpensesFee: 8.0, // 2 * 4.00
@@ -149,7 +137,6 @@ export const floors: Floor[] = [
       },
       {
         number: 128,
-        debt: 0,
         residentsCount: 0,
         repairsFee: 2.5,
         currentExpensesFee: 0.0, // 0 * 4.00
@@ -158,7 +145,6 @@ export const floors: Floor[] = [
       },
       {
         number: 129,
-        debt: 0,
         residentsCount: 1,
         repairsFee: 2.5,
         currentExpensesFee: 4.0, // 1 * 4.00
@@ -172,7 +158,6 @@ export const floors: Floor[] = [
     apartments: [
       {
         number: 130,
-        debt: 0,
         residentsCount: 2,
         repairsFee: 2.5,
         currentExpensesFee: 8.0, // 2 * 4.00
@@ -181,7 +166,6 @@ export const floors: Floor[] = [
       },
       {
         number: 131,
-        debt: 0,
         residentsCount: 2,
         repairsFee: 2.5,
         currentExpensesFee: 8.0, // 2 * 4.00
@@ -190,7 +174,6 @@ export const floors: Floor[] = [
       },
       {
         number: 132,
-        debt: 0,
         residentsCount: 1,
         repairsFee: 2.5,
         currentExpensesFee: 4.0, // 1 * 4.00
@@ -204,7 +187,6 @@ export const floors: Floor[] = [
     apartments: [
       {
         number: 133,
-        debt: 0,
         residentsCount: 0,
         repairsFee: 2.5,
         currentExpensesFee: 0.0, // 0 * 4.00
@@ -213,7 +195,6 @@ export const floors: Floor[] = [
       },
       {
         number: 134,
-        debt: 0,
         residentsCount: 2,
         repairsFee: 2.5,
         currentExpensesFee: 8.0, // 2 * 4.00
@@ -222,7 +203,6 @@ export const floors: Floor[] = [
       },
       {
         number: 135,
-        debt: 0,
         residentsCount: 2,
         repairsFee: 2.5,
         currentExpensesFee: 8.0, // 2 * 4.00
@@ -236,7 +216,6 @@ export const floors: Floor[] = [
     apartments: [
       {
         number: 136,
-        debt: 0,
         residentsCount: 2,
         repairsFee: 2.5,
         currentExpensesFee: 8.0, // 2 * 4.00
@@ -245,7 +224,6 @@ export const floors: Floor[] = [
       },
       {
         number: 137,
-        debt: 0,
         residentsCount: 0,
         repairsFee: 2.5,
         currentExpensesFee: 0.0, // 0 * 4.00
@@ -254,7 +232,6 @@ export const floors: Floor[] = [
       },
       {
         number: 138,
-        debt: 0,
         residentsCount: 2,
         repairsFee: 2.5,
         currentExpensesFee: 8.0, // 2 * 4.00

@@ -8,4 +8,11 @@ export const routes: Routes = [
         (m) => m.ResidentsComponent
       ),
   },
+  {
+    path: 'apartment/:id',
+    loadComponent: () =>
+      import('./apartment-details/apartment-details.component').then(
+        (m) => m.ApartmentDetailsComponent
+      ),
+  },
 ];
