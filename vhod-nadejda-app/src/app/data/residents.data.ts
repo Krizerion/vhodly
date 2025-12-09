@@ -10,8 +10,8 @@ export const announcements: Announcement[] = [
 ];
 
 export const accountBalances: AccountBalances = {
-  currentExpensesBalance: 511,
-  repairsBalance: 260,
+  currentExpensesBalance: 560.08,
+  repairsBalance: 267.67,
 };
 
 export const bills: Bill[] = [
