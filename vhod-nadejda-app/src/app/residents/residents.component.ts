@@ -36,7 +36,7 @@ export class ResidentsComponent implements OnInit {
       this.announcements = [...data.announcements];
       this.currentExpensesBalance = data.accountBalances.currentExpensesBalance;
       this.repairsBalance = data.accountBalances.repairsBalance;
-      this.floors = [...data.floors];
+      this.floors = [...data.floors].reverse();
       // Force change detection
       this.cdr.detectChanges();
     });

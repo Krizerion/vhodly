@@ -17,37 +17,12 @@ export const accountBalances: AccountBalances = {
 export const bills: Bill[] = [
   {
     id: 1,
-    type: 'Електричество',
-    amount: 450.5,
-    dueDate: '15-Jan-2025',
+    type: 'Поддръжка асансьор',
+    amount: 61.36,
+    dueDate: '15-Dec-2025',
     paid: true,
-    paidDate: '10-Jan-2025',
-    description: 'Сметка за декември 2024',
-  },
-  {
-    id: 2,
-    type: 'Вода',
-    amount: 120.0,
-    dueDate: '20-Jan-2025',
-    paid: true,
-    paidDate: '18-Jan-2025',
-    description: 'Сметка за декември 2024',
-  },
-  {
-    id: 3,
-    type: 'Отопление',
-    amount: 380.75,
-    dueDate: '25-Jan-2025',
-    paid: false,
-    description: 'Сметка за януари 2025',
-  },
-  {
-    id: 4,
-    type: 'Електричество',
-    amount: 420.0,
-    dueDate: '15-Feb-2025',
-    paid: false,
-    description: 'Сметка за януари 2025',
+    paidDate: '10-Oct-2025',
+    description: 'Сметка за декември 2025',
   },
 ];
 
