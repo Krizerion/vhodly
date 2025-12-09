@@ -25,7 +25,11 @@
             }
           </div>
           <div class="bill-amount">
+            @if (bill.amount === null) {
+            <span class="amount-value not-issued">Не е излязла</span>
+            } @else {
             <span class="amount-value">€{{ bill.amount | number : "1.2-2" }}</span>
+            }
             @if (bill.paid) {
             <span class="paid-badge">Платено</span>
             } @else {
@@ -38,7 +42,7 @@
             <span class="detail-label">Крайна дата:</span>
             <span class="detail-value">{{ bill.dueDate | monthYear }}</span>
           </div>
-          @if (bill.paid && bill.paidDate) {
+          @if (bill.paid && bill.paidDate && bill.amount !== null) {
           <div class="detail-row">
             <span class="detail-label">Платено на:</span>
             <span class="detail-value">{{ bill.paidDate | monthYear }}</span>

@@ -27,9 +27,9 @@ export interface AccountBalances {
 export interface Bill {
   id: number;
   type: string; // e.g., "Електричество", "Вода", "Отопление"
-  amount: number;
+  amount: number | null;
   dueDate: string; // Format: "DD-MMM-YYYY"
   paid: boolean;
-  paidDate?: string; // Format: "DD-MMM-YYYY"
+  paidDate?: string | null; // Format: "DD-MMM-YYYY"
   description?: string;
 }

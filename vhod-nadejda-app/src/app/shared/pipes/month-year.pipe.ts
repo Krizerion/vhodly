@@ -40,6 +40,6 @@ export class MonthYearPipe implements PipeTransform {
       return value; // Return as-is if month not found
     }
 
-    return `${bulgarianMonth} ${year}`;
+    return `${day} ${bulgarianMonth} ${year}`;
   }
 }

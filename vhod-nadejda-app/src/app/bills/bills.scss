@@ -242,9 +242,20 @@
           font-variant-numeric: tabular-nums;
           letter-spacing: -0.5px;
 
+          &.not-issued {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.6);
+            font-style: italic;
+          }
+
           @media (max-width: 480px) {
             font-size: 1.5rem;
             margin-bottom: 0;
+
+            &.not-issued {
+              font-size: 1rem;
+            }
           }
         }
 
@@ -293,12 +304,13 @@
 
       .detail-row {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        gap: 12px;
 
         .detail-label {
           font-size: 0.9rem;
           color: rgba(255, 255, 255, 0.6);
+          white-space: nowrap;
         }
 
         .detail-value {

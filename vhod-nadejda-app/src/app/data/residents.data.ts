@@ -24,6 +24,24 @@ export const bills: Bill[] = [
     paidDate: '10-Oct-2025',
     description: 'Сметка за декември 2025',
   },
+  {
+    id: 2,
+    type: 'Ток асансьор',
+    amount: null,
+    dueDate: '15-Jan-2026',
+    paid: false,
+    paidDate: null,
+    description: 'Сметка за ноември 2025',
+  },
+  {
+    id: 3,
+    type: 'Ток общи части',
+    amount: null,
+    dueDate: '15-Jan-2026',
+    paid: false,
+    paidDate: null,
+    description: 'Сметка за ноември 2025',
+  },
 ];
 
 export const floors: Floor[] = [
