@@ -10,7 +10,7 @@ export const announcements: Announcement[] = [
 ];
 
 export const accountBalances: AccountBalances = {
-  currentExpensesBalance: 560.08,
+  currentExpensesBalance: 349.13,
   repairsBalance: 267.67,
 };
 
@@ -27,19 +27,28 @@ export const bills: Bill[] = [
   {
     id: 2,
     type: 'Ток асансьор',
-    amount: null,
+    amount: 20.79,
     dueDate: '15-Jan-2026',
-    paid: false,
-    paidDate: null,
+    paid: true,
+    paidDate: '16-Dec-2025',
     description: 'Сметка за ноември 2025',
   },
   {
     id: 3,
     type: 'Ток общи части',
-    amount: null,
+    amount: 6.14,
     dueDate: '15-Jan-2026',
-    paid: false,
-    paidDate: null,
+    paid: true,
+    paidDate: '16-Dec-2025',
     description: 'Сметка за ноември 2025',
+  },
+  {
+    id: 4,
+    type: 'Поддръжка асансьор до края на март 2026',
+    amount: 184.02,
+    dueDate: '15-Jan-2026',
+    paid: true,
+    paidDate: '12-Dec-2025',
+    description: 'Поддръжка на асансьор до края на март 2026',
   },
 ];
