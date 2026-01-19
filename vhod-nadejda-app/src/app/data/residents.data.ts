@@ -50,15 +50,6 @@ export const bills: Bill[] = [
 ];
 
 export const transactions: Transaction[] = [
-  // {
-  //   id: 19,
-  //   accountType: 'currentExpenses',
-  //   type: 'expense',
-  //   amount: 6.14,
-  //   date: '16-Dec-2025',
-  //   description: 'Плащане на сметка за ток общи части',
-  // },
-  // Transactions for Repairs Account
   {
     id: 150120261,
     accountType: 'currentExpenses',
@@ -71,9 +62,9 @@ export const transactions: Transaction[] = [
     id: 150120261,
     accountType: 'currentExpenses',
     type: 'income',
-    amount: 8,
+    amount: 24,
     date: '19-Jan-2026',
-    description: 'Платени такси за януари и февруари от апартамент 129',
+    description: 'Платени такси за януари и февруари от апартаменти 129 и 131',
   },
   {
     id: 150120262,
@@ -87,8 +78,8 @@ export const transactions: Transaction[] = [
     id: 150120262,
     accountType: 'repairs',
     type: 'income',
-    amount: 5,
+    amount: 10,
     date: '19-Jan-2026',
-    description: 'Платени такси за януари и февруари от апартамент 129',
+    description: 'Платени такси за януари и февруари от апартаменти 129 и 131',
   },
 ];
