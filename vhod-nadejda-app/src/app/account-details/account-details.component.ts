@@ -11,7 +11,7 @@ import { DataService } from '../data/data.service';
 type AccountType = 'currentExpenses' | 'repairs';
 
 @Component({
-  selector: 'vh-account-details',
+  selector: 'vn-account-details',
   standalone: true,
   imports: [
     CommonModule,

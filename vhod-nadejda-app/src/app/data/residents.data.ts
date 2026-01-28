@@ -49,7 +49,7 @@ export const bills: Bill[] = [
   },
 ];
 
-export const currentExpensesTransactions: Transaction[] = [
+export const transactions: Transaction[] = [
   {
     id: 150120261,
     accountType: 'currentExpenses',
@@ -66,9 +66,6 @@ export const currentExpensesTransactions: Transaction[] = [
     date: '19-Jan-2026',
     description: 'Платени такси за януари и февруари от апартаменти 129 и 131',
   },
-];
-
-export const repairsTransactions: Transaction[] = [
   {
     id: 150120262,
     accountType: 'repairs',
@@ -85,10 +82,4 @@ export const repairsTransactions: Transaction[] = [
     date: '19-Jan-2026',
     description: 'Платени такси за януари и февруари от апартаменти 129 и 131',
   },
-];
-
-// Combined array for backward compatibility (used for bill-specific transactions)
-export const transactions: Transaction[] = [
-  ...currentExpensesTransactions,
-  ...repairsTransactions,
 ];

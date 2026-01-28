@@ -27,14 +27,14 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: vhodly-app/package-lock.json
+          cache-dependency-path: vhod-nadejda-app/package-lock.json
 
       - name: Install dependencies
-        working-directory: ./vhodly-app
+        working-directory: ./vhod-nadejda-app
         run: npm ci
 
       - name: Build
-        working-directory: ./vhodly-app
+        working-directory: ./vhod-nadejda-app
         run: npm run build -- --base-href="/${{ github.event.repository.name }}/"
 
       - name: Setup Pages
@@ -43,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './vhodly-app/dist/vhodly-app/browser'
+          path: './vhod-nadejda-app/dist/vhod-nadejda-app/browser'
 
   deploy:
     environment:

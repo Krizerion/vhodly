@@ -13,8 +13,6 @@ import {
   accountBalances as staticAccountBalances,
   bills as staticBills,
   transactions as staticTransactions,
-  currentExpensesTransactions,
-  repairsTransactions,
 } from './residents.data';
 
 @Injectable({
@@ -65,10 +63,9 @@ export class DataService {
   loadAccountTransactions(
     accountType: 'currentExpenses' | 'repairs'
   ): Observable<Transaction[]> {
-    const accountTransactions =
-      accountType === 'currentExpenses'
-        ? currentExpensesTransactions
-        : repairsTransactions;
+    const accountTransactions = staticTransactions.filter(
+      (t) => t.accountType === accountType
+    );
     return of(accountTransactions);
   }
 }

@@ -8,7 +8,7 @@ import { DataService } from '../data/data.service';
 import { Apartment, Announcement, Floor } from '../data/interfaces';
 
 @Component({
-  selector: 'vh-residents',
+  selector: 'vn-residents',
   standalone: true,
   imports: [
     CommonModule,
