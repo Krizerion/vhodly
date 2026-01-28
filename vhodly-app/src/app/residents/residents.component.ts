@@ -1,11 +1,16 @@
-import { Component, inject, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
+import {
+  ChangeDetectorRef,
+  Component,
+  inject,
+  type OnInit,
+} from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
+import { Router, RouterModule } from '@angular/router';
 import { DataService } from '../data/data.service';
-import { Apartment, Announcement, Floor } from '../data/interfaces';
+import type { Announcement, Apartment, Floor } from '../data/interfaces';
 
 @Component({
   selector: 'vh-residents',

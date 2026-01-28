@@ -1,13 +1,13 @@
 import {
   Directive,
-  ElementRef,
+  type ElementRef,
   Input,
-  OnDestroy,
-  OnInit,
-  OnChanges,
-  SimpleChanges,
+  type OnChanges,
+  type OnDestroy,
+  type OnInit,
+  type SimpleChanges,
 } from '@angular/core';
-import tippy, { Instance, Props } from 'tippy.js';
+import tippy, { type Instance, type Props } from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
 
 @Directive({

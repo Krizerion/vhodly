@@ -1,10 +1,10 @@
+import { provideHttpClient } from '@angular/common/http';
 import {
-  ApplicationConfig,
+  type ApplicationConfig,
   provideBrowserGlobalErrorListeners,
 } from '@angular/core';
-import { provideRouter, withHashLocation } from '@angular/router';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { provideHttpClient } from '@angular/common/http';
+import { provideRouter, withHashLocation } from '@angular/router';
 
 import { routes } from './app.routes';
 

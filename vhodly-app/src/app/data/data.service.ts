@@ -1,14 +1,14 @@
-import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import {
-  Announcement,
-  Floor,
+import { Injectable, inject } from '@angular/core';
+import type { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
+import type {
   AccountBalances,
+  Announcement,
   Bill,
+  Floor,
   Transaction,
 } from './interfaces';
-import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',

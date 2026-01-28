@@ -1,18 +1,18 @@
-import { Routes } from '@angular/router';
+import type { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
       import('./residents/residents.component').then(
-        (m) => m.ResidentsComponent
+        (m) => m.ResidentsComponent,
       ),
   },
   {
     path: 'apartment/:id',
     loadComponent: () =>
       import('./apartment-details/apartment-details.component').then(
-        (m) => m.ApartmentDetailsComponent
+        (m) => m.ApartmentDetailsComponent,
       ),
   },
   {
@@ -23,7 +23,7 @@ export const routes: Routes = [
     path: 'account/:type',
     loadComponent: () =>
       import('./account-details/account-details.component').then(
-        (m) => m.AccountDetailsComponent
+        (m) => m.AccountDetailsComponent,
       ),
   },
 ];
