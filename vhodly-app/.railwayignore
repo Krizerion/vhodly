@@ -1,0 +1,17 @@
+# Files and directories to ignore during Railway deployment
+node_modules
+.git
+.gitignore
+.vscode
+.idea
+*.log
+.DS_Store
+coverage
+.angular
+tmp
+out-tsc
+*.spec.ts
+*.test.ts
+test
+e2e
+.history

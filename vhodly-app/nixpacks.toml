@@ -1,0 +1,14 @@
+# Nixpacks configuration for Railway
+# This file provides additional configuration for Railway's Nixpacks builder
+
+[phases.setup]
+nixPkgs = ["nodejs-20_x", "npm"]
+
+[phases.install]
+cmds = ["npm ci"]
+
+[phases.build]
+cmds = ["npm run build:prod"]
+
+[start]
+cmd = "npx serve -s dist/vhodly-app/browser -l ${PORT:-3000}"

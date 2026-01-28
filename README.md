@@ -42,9 +42,7 @@ npm start
 
 За инструкции как да публикувате приложението:
 
-- **AWS Deployment**: Вижте [AWS_DEPLOYMENT_GUIDE.md](./AWS_DEPLOYMENT_GUIDE.md) за пълно ръководство
-- **Quick Start**: Вижте [QUICK_START_AWS.md](./QUICK_START_AWS.md) за бърз старт
-- **GitHub Pages**: Вижте [DEPLOYMENT.md](./DEPLOYMENT.md) за безплатен хостинг
+- **Railway Deployment**: Вижте [RAILWAY_DEPLOYMENT_GUIDE.md](./RAILWAY_DEPLOYMENT_GUIDE.md) за пълно ръководство за автоматичен деплой на Railway
 
 ## Технологии
 
