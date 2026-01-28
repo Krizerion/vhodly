@@ -1,63 +1,74 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import type { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
-import type {
-  AccountBalances,
+import { Observable, map, of } from 'rxjs';
+import {
   Announcement,
-  Bill,
   Floor,
+  AccountBalances,
+  Bill,
   Transaction,
 } from './interfaces';
+import { CsvDataService } from './csv-data.service';
+import {
+  announcements as staticAnnouncements,
+  accountBalances as staticAccountBalances,
+  bills as staticBills,
+  transactions as staticTransactions,
+  currentExpensesTransactions,
+  repairsTransactions,
+} from './residents.data';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  private http = inject(HttpClient);
-  private readonly apiUrl = environment.apiUrl;
+  private csvData = inject(CsvDataService);
 
   /**
    * Load all data:
-   * - Announcements and Balances from API
-   * - Floors/Apartments from API
+   * - Announcements and Balances from constants (manually updated)
+   * - Floors/Apartments from CSV file
    */
   loadData(): Observable<{
     announcements: Announcement[];
     accountBalances: AccountBalances;
     floors: Floor[];
   }> {
-    return this.http.get<{
-      announcements: Announcement[];
-      accountBalances: AccountBalances;
-      floors: Floor[];
-    }>(`${this.apiUrl}/data/load`);
+    return this.csvData.loadFloors().pipe(
+      map((floors) => ({
+        announcements: staticAnnouncements,
+        accountBalances: staticAccountBalances,
+        floors,
+      }))
+    );
   }
 
   /**
-   * Load bills from API
+   * Load bills from constants (manually updated)
    */
   loadBills(): Observable<Bill[]> {
-    return this.http.get<Bill[]>(`${this.apiUrl}/bills`);
+    return of(staticBills);
   }
 
   /**
    * Load transactions for a specific bill
    */
   loadTransactions(billId: number): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(
-      `${this.apiUrl}/bills/${billId}/transactions`,
+    const billTransactions = staticTransactions.filter(
+      (t) => t.billId === billId
     );
+    return of(billTransactions);
   }
 
   /**
    * Load transactions for a specific account type
    */
   loadAccountTransactions(
-    accountType: 'currentExpenses' | 'repairs',
+    accountType: 'currentExpenses' | 'repairs'
   ): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(
-      `${this.apiUrl}/accounts/${accountType}/transactions`,
-    );
+    const accountTransactions =
+      accountType === 'currentExpenses'
+        ? currentExpensesTransactions
+        : repairsTransactions;
+    return of(accountTransactions);
   }
 }

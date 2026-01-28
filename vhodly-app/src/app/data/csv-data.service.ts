@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { map, type Observable } from 'rxjs';
-import type { Apartment, Floor } from './interfaces';
+import { HttpClient } from '@angular/common/http';
+import { Observable, map } from 'rxjs';
+import { Floor, Apartment } from './interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -58,10 +58,7 @@ export class CsvDataService {
               if (!floorsMap.has(lastFloor)) {
                 floorsMap.set(lastFloor, []);
               }
-              const lastFloorApartments = floorsMap.get(lastFloor);
-              if (lastFloorApartments) {
-                lastFloorApartments.push({ number: null });
-              }
+              floorsMap.get(lastFloor)!.push({ number: null });
               return;
             }
 
@@ -109,7 +106,7 @@ export class CsvDataService {
           return Array.from(floorsMap.entries())
             .map(([number, apartments]) => ({ number, apartments }))
             .sort((a, b) => a.number - b.number);
-        }),
+        })
       );
   }
 

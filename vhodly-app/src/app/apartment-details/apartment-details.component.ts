@@ -1,22 +1,22 @@
-import { CommonModule } from '@angular/common';
 import {
-  type AfterViewChecked,
-  type AfterViewInit,
-  ChangeDetectorRef,
   Component,
-  type ElementRef,
+  OnInit,
   inject,
-  type OnInit,
   ViewChild,
+  ElementRef,
+  AfterViewInit,
+  AfterViewChecked,
+  ChangeDetectorRef,
 } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { DataService } from '../data/data.service';
-import type { Apartment } from '../data/interfaces';
-import { TippyDirective } from '../shared/directives/tippy.directive';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { Apartment } from '../data/interfaces';
 import { MonthYearPipe } from '../shared/pipes/month-year.pipe';
+import { TippyDirective } from '../shared/directives/tippy.directive';
+import { DataService } from '../data/data.service';
 
 @Component({
   selector: 'vh-apartment-details',

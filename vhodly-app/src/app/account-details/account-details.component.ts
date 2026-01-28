@@ -1,17 +1,12 @@
+import { Component, OnInit, inject, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectorRef,
-  Component,
-  inject,
-  type OnInit,
-} from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { DataService } from '../data/data.service';
-import { AccountBalances, type Transaction } from '../data/interfaces';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { Transaction, AccountBalances } from '../data/interfaces';
 import { MonthYearPipe } from '../shared/pipes/month-year.pipe';
+import { DataService } from '../data/data.service';
 
 type AccountType = 'currentExpenses' | 'repairs';
 

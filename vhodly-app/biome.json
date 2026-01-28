@@ -16,26 +16,12 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
-      "style": {
-        "noUnusedTemplateLiteral": "off"
-      }
+      "recommended": true
     }
   },
   "javascript": {
     "formatter": {
       "quoteStyle": "single"
-    }
-  },
-  "html": {
-    "formatter": {
-      "enabled": false
-    },
-    "linter": {
-      "enabled": false
-    },
-    "parser": {
-      "interpolation": true
     }
   },
   "assist": {
