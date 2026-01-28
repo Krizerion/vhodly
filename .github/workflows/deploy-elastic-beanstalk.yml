@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'vhodly-api/**'
-  workflow_dispatch:
 
 env:
   AWS_REGION: eu-central-1
