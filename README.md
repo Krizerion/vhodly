@@ -1,4 +1,4 @@
-# vhod-nadejda
+# Vhodly
 
 Управление на вход - Информационна система за жители
 
@@ -13,7 +13,7 @@
 ## Разработка
 
 ```bash
-cd vhod-nadejda-app
+cd vhodly-app
 npm install
 npm start
 ```
@@ -22,13 +22,7 @@ npm start
 
 ## Деплой
 
-### Railway (Препоръчително)
-
-За подробни инструкции за деплой на Railway, вижте [RAILWAY_DEPLOYMENT.md](./RAILWAY_DEPLOYMENT.md)
-
-### GitHub Pages
-
-За инструкции как да публикувате приложението на GitHub Pages, вижте [DEPLOYMENT.md](./DEPLOYMENT.md)
+За инструкции как да публикувате приложението на GitHub Pages или други безплатни хостинг платформи, вижте [DEPLOYMENT.md](./DEPLOYMENT.md)
 
 ## Технологии
 
